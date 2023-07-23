@@ -1,0 +1,8 @@
+Employer Model requires : 
+    1. Name of Employer
+    2. Company of Employer
+    3. Mode of Employment (viz. Online or On-Site)
+    4. Amount of Package 
+    5. Date of Job Registration ---> Taken by Default, No need to provide
+    6. Type of Job (viz. Tech or Non-Tech)
+
