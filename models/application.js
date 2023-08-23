@@ -22,7 +22,7 @@ const applicationSchema = new mongoose.Schema({
     },
     status : {
         type : String,
-        enum : ['pending', 'interview', 'hired'],
+        enum : ['pending', 'interview', 'hired', 'rejected'],
         default : 'pending'
     },
     resume : {

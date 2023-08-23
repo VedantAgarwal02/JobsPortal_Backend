@@ -130,12 +130,29 @@ const deleteApplication = async (req,res) => {
     })
 }
 
+const deleteApplicationsOfJob = async(req,res) => {
+    const jobId = req.params.jobId
+
+    try {
+        const applicationsDeleted = await applicationModel.deleteMany({jobId});
+        console.log(applicationsDeleted.deletedCount)
+        return res.status(StatusCodes.OK).json({
+            success:true,
+            totalDeleted:applicationsDeleted.deletedCount
+        })
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
+
 module.exports = {
     createApplication,
     getAllApplications,
     getApplication,
     updateApplication,
     deleteApplication,
-    getApplicationsofUser
+    getApplicationsofUser,
+    deleteApplicationsOfJob
 }
 
