@@ -4,6 +4,6 @@ const {createApplication, getAllApplications, getApplication, updateApplication,
 
 applicationRouter.route('/').get(getApplicationsofUser)
 applicationRouter.route('/:jobId/').post(createApplication).get(getAllApplications).delete(deleteApplicationsOfJob)
-applicationRouter.route('/:jobId/:seekerId').get(getApplication).patch(updateApplication).delete(deleteApplication)
+applicationRouter.route('/:jobId/:id').get(getApplication).patch(updateApplication).delete(deleteApplication)
 
 module.exports = applicationRouter;

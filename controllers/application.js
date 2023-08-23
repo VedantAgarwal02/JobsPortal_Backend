@@ -63,7 +63,7 @@ const getApplicationsofUser = async(req,res) => {
 }
 
 const getApplication = async (req,res) => {
-    const seekerId = req.params.seekerId;
+    const seekerId = req.user.id;
     const jobId = req.params.jobId
     
     try {
